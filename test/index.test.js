@@ -57,4 +57,11 @@ describe('DOM Testing and User Behavior Simulation', () => {
     expect(errorMessage.textContent).toBe('Input cannot be empty')
     expect(errorMessage.classList.contains('hidden')).toBe(false)
   })
+  
+  it('should show that elements exist in index.html', () => {
+    expect(document.getElementById("dynamic-content")).not.toBeNull();
+    expect(document.getElementById("error-message")).not.toBeNull();
+    expect(document.getElementById("user-form")).not.toBeNull();
+    expect(document.getElementById("user-input")).not.toBeNull();
+  })
 })
